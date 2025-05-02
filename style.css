@@ -42,14 +42,22 @@ header {
 
 /* 导航菜单样式 - 改进版 */
 .main-nav {
-    display: flex;
-    justify-content: center;
     background-color: #f1f1f1;
     padding: 10px 0;
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
     font-family: 'Noto Serif SC', serif;
 }
+
+.nav-inner {
+    display: flex;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+
 
 .nav-link {
     padding: 12px 20px;
@@ -180,15 +188,16 @@ footer {
 .contact-info p {
     margin-bottom: 8px;
     color: #ddd;
+    font-family: 'Noto Serif SC', serif;
 }
 
 /* 增强的响应式设计 */
 @media (max-width: 768px) {
     .menu-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr); 
         padding: 10px;
     }
-    
+}
     .menu-section h2 {
         font-size: 1.5rem;
         width: 90%;
@@ -210,7 +219,7 @@ footer {
     .dish-image {
         height: 200px;
     }
-}
+
 
 @media (max-width: 480px) {
     .restaurant-logo {
