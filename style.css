@@ -189,6 +189,7 @@ footer {
     margin-bottom: 8px;
     color: #ddd;
     font-family: 'Noto Serif SC', serif;
+    
 }
 
 /* 增强的响应式设计 */
@@ -321,5 +322,13 @@ footer {
     width: 80%;
     max-width: 300px;
 }
-
+.fa-thumbs-up {
+    font-size: 24px; /* 图标大小 */
+    color: #000000;  /* 你可以选择任何颜色 */
+    cursor: pointer; /* 鼠标悬停时显示为指针 */
+    transition: transform 0.3s ease;
+  }
+.word p {
+    text-align: center;
+}
   
