@@ -27,3 +27,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+function switchLang(lang) {
+    const contents = document.querySelectorAll('.lang-content');
+    const buttons = document.querySelectorAll('.lang-toggle button');
+    
+    contents.forEach(p => {
+      p.style.display = p.getAttribute('data-lang') === lang ? 'block' : 'none';
+    });
+  
+    buttons.forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('onclick').includes(lang));
+    });
+  }
+  
