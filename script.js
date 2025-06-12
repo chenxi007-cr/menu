@@ -40,4 +40,14 @@ function switchLang(lang) {
       btn.classList.toggle('active', btn.getAttribute('onclick').includes(lang));
     });
   }
-  
+
+   const swiper = new Swiper('.swiper-container', {
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+      delay: 3000,
+    },
+  });
