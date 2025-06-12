@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css"/>
+
+
 
 </head>
 <body>
@@ -26,6 +29,19 @@
           </nav>
           
     </header>
+
+     <div class="swiper-container">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="images/青岛poster.jpg" alt="1">
+        <div class="slogan"></div>
+      </div>
+      <div class="swiper-slide">
+        <img src="images/ladies night.png" alt="2">
+        <div class="slogan"></div>
+      </div>
+    </div>
+    </div>
 
     <main>
         <!-- 主打拉面分类 -->
@@ -197,23 +213,6 @@
                     </div>
                 </div>
                 <div class="menu-item">
-                    <img src="images/味增茄子.JPG" alt="味增茄子" class="dish-image">
-                    <div class="dish-info">
-                        <h3 class="dish-name">味增茄子 <i class="fas fa-thumbs-up"></i>
-                            <span lang="en">MISO EGGPLANT</span></h3>
-                        <p class="dish-description"></p>
-                        <p class="dish-price">RM18</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <img src="images/蒜香西兰花.jpeg" alt="蒜香花椰菜" class="dish-image">
-                    <div class="dish-info">
-                        <h3 class="dish-name">蒜香花椰菜 <span lang="en">GARLIC BROCCOLI</span></h3>
-                        <p class="dish-description"></p>
-                        <p class="dish-price">RM16</p>
-                    </div>
-                </div>
-                <div class="menu-item">
                     <img src="images/饺子.JPG" alt="猪肉饺子" class="dish-image">
                     <div class="dish-info">
                         <h3 class="dish-name">猪肉饺子 <span lang="en">PORK DUMPLING</span></h3>
@@ -227,22 +226,6 @@
                         <h3 class="dish-name">毛豆 <span lang="en">EDAMAME</span></h3>
                         <p class="dish-description"></p>
                         <p class="dish-price">RM12</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <img src="images/蒜香毛豆.jpg" alt="蒜香毛豆" class="dish-image">
-                    <div class="dish-info">
-                        <h3 class="dish-name">蒜香毛豆 <span lang="en">GARLIC EDAMAME</span></h3>
-                        <p class="dish-description"></p>
-                        <p class="dish-price">RM14</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <img src="images/春卷.JPG" alt="春卷" class="dish-image">
-                    <div class="dish-info">
-                        <h3 class="dish-name">春卷 <span lang="en">SPRING ROLL</span></h3>
-                        <p class="dish-description"></p>
-                        <p class="dish-price">RM24</p>
                     </div>
                 </div>
                 <div class="menu-item">
@@ -373,6 +356,22 @@
             <p>ADDRESS: 22, JLN AUSTIN HEIGHT 7/3, 81100 JOHOR BAHRU, JOHOR DARUL TA'ZIM</p>
         </div>
     </footer>
-    <script src="script.js"></script>
+    
+    <script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
+<script>
+
+const swiper = new Swiper('.swiper-container', {
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+      delay: 3000,
+    },
+  });
+</script>
+
+<script src="script.js"></script>
 </body>
 </html>
