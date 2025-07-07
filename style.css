@@ -55,19 +55,24 @@ header {
     max-width: 800px;
     margin: 0 auto;
     flex-wrap: wrap;
+    align-items: center;
+    padding: 10px;
 }
-
-
 
 .nav-link {
     padding: 12px 20px;
     text-decoration: none;
     color: #333;
-    font-weight: 500;
-    font-size: 1.1rem;
     position: relative;
-    transition: all 0.3s;
     margin: 0 5px;
+    background-color: #fff;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  font-family: 'Noto Serif SC', serif;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: inline-block;
 }
 
 .nav-link:hover {
@@ -89,7 +94,7 @@ header {
     width: 80%;
     height: 3px;
     background-color: #e74c3c;
-    display: none; /* 默认隐藏 */
+    display: block; /* 默认隐藏 */
 }
 
 /* 通过JavaScript添加的clicked类显示红线 */
