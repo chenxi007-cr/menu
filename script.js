@@ -51,3 +51,27 @@ function switchLang(lang) {
       delay: 3000,
     },
   });
+
+  function openPopup() {
+  const popup = document.getElementById('novemberPopup');
+  popup.style.display = 'flex';
+}
+
+function closePopup() {
+  const popup = document.getElementById('novemberPopup');
+  popup.style.display = 'none';
+}
+
+// 页面加载后自动显示弹窗
+document.addEventListener('DOMContentLoaded', function() {
+  // 检查是否是11月份（实际部署时可删除注释）
+  const now = new Date();
+  if (now.getMonth() === 10) { // 10表示11月（月份从0开始计数）
+    openPopup();
+  }
+  
+  // 点击弹窗外部关闭
+  document.getElementById('novemberPopup').addEventListener('click', function(e) {
+    if (e.target === this) closePopup();
+  });
+});

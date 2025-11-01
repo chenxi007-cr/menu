@@ -429,3 +429,64 @@ footer {
   0%, 100% { transform: translateX(0); }
   50% { transform: translateX(-100%); }
 }
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* 确保在导航栏(z-index:100)之上 */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.popup-content {
+  position: relative;
+  width: 100%;
+  max-width: 500px; /* 控制弹窗最大宽度 */
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.popup-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.popup-image {
+  width: 100%;
+  height: auto; /* 保持图片比例 */
+  display: block;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .popup-content {
+    max-width: 90vw; /* 移动端占屏幕90%宽度 */
+    max-height: 80vh; /* 限制高度防止溢出 */
+  }
+  
+  .popup-image {
+    max-height: calc(80vh - 60px); /* 减去关闭按钮高度 */
+    object-fit: contain; /* 确保图片完整显示 */
+  }
+}
